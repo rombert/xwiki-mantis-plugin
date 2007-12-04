@@ -1,0 +1,25 @@
+USAGE INSTRUCTIONS
+-------------------------
+
+1. Copy the commons-discovery-0.2.jar, wsdl4j-1.5.1.jar and 
+   xwiki-mantis-plugin-VERSION.jar to the expanded xwiki webapp in 
+   WEB-INF/lib/
+2. Register the plugin in WEB-INF/xwiki.cfg by adding 
+   net.isageek.rombert.xwiki.MantisPlugin to the list of xwiki plugins 
+   
+   xwiki.plugins=\
+                ...
+                com.xpn.xwiki.plugin.rightsmanager.RightsManagerPlugin,\
+                net.isageek.rombert.xwiki.MantisPlugin
+
+3. Configure Mantis connection
+
+xwiki.plugin.mantis.username  = user
+xwiki.plugin.mantis.password  = pass
+xwiki.plugin.mantis.endpoint  = http://your.mantis.install/mc/mantisconnect.php
+xwiki.plugin.mantis.issueLink = http://your.mantis.install/view.php?id=
+
+4. Edit a wiki page and invoke the plugin
+
+$xwiki.mantis.listIssues("projectName","filterName")
+
